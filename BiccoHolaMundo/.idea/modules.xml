@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BiccoHolaMundo.iml" filepath="$PROJECT_DIR$/BiccoHolaMundo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basededatos/basededatos.iml" filepath="$PROJECT_DIR$/basededatos/basededatos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/biccopreferenciascompartidas/biccopreferenciascompartidas.iml" filepath="$PROJECT_DIR$/biccopreferenciascompartidas/biccopreferenciascompartidas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geocoder/geocoder.iml" filepath="$PROJECT_DIR$/geocoder/geocoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listasymenus/listasymenus.iml" filepath="$PROJECT_DIR$/listasymenus/listasymenus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mapastest/mapastest.iml" filepath="$PROJECT_DIR$/mapastest/mapastest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miprimerfragmento/miprimerfragmento.iml" filepath="$PROJECT_DIR$/miprimerfragmento/miprimerfragmento.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miprimermapa/miprimermapa.iml" filepath="$PROJECT_DIR$/miprimermapa/miprimermapa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/misegundomapa/misegundomapa.iml" filepath="$PROJECT_DIR$/misegundomapa/misegundomapa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/segundaclase/segundaclase.iml" filepath="$PROJECT_DIR$/segundaclase/segundaclase.iml" />
+    </modules>
+  </component>
+</project>
+

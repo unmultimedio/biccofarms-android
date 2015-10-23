@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Listas Y Menus</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_insert">Inserte una flor</string>
+    <string name="btn_insert">Insertar</string>
+    <string name="clear_list">Limpiar</string>
+    <string name="empty_name">¡Ingresa un nombre de flor!</string>
+    <string name="delete_item_label">Eliminar</string>
+</resources>

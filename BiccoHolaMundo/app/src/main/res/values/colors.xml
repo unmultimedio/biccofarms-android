@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="verde_bicco">#ff46d238</color>
+
+    <color name="yellow">#FDDF64</color>
+    <color name="green">#6CBE3B</color>
+    <color name="violet">#9439B0</color>
+    <color name="blue">#61ADDA</color>
+    <color name="orange">#FBA340</color>
+    <color name="red">#F81618</color>
+
+</resources>

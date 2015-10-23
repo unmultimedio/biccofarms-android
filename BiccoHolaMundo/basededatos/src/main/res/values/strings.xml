@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Base De Datos</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_name">Ingresa un nombre</string>
+    <string name="hint_drink">¿Qué bebida favorita?</string>
+    <string name="hint_sport">¿Qué deporte favorito?</string>
+    <string name="save_btn">Crear Usuario</string>
+    <string name="empty_data">Hay datos vacíos!</string>
+    <string name="user_not_inserted">Usuario no pudo ser insertado</string>
+    <string name="inserted_user">Insertado exitosamente usuario</string>
+    <string name="delete_user">Eliminar Usuario</string>
+    <string name="deleted_user">Filas eliminadas:</string>
+    <string name="user_not_deleted">Usuario no eliminado</string>
+</resources>

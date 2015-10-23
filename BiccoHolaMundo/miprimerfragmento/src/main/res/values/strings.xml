@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MiPrimerFragmento</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_drink">Bebida</string>
+    <string name="hint_sport">Deporte</string>
+    <string name="save_btn">Guardar</string>
+    <string name="empty_data">¡Hacen falta datos!</string>
+    <string name="no_data">NO DATA</string>
+</resources>

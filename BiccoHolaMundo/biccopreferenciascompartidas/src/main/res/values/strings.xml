@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Bicco Preferencias Compartidas</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_name">Ingresa tu nombre</string>
+    <string name="save_btn">Guardar</string>
+    <string name="hint_age">Ingresa tu edad</string>
+    <string name="single">¿Estás solter@?</string>
+    <string name="no_data">NO HAY DATOS</string>
+    <string name="name">Nombre:</string>
+    <string name="age">Edad:</string>
+    <string name="clear_btn">Limpiar datos</string>
+</resources>

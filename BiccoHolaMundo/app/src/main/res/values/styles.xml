@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyOwnColor" parent="AppTheme">
+        <item name="colorPrimary">@color/verde_bicco</item>
+        <item name="android:actionBarStyle">@style/MyOwnColor.ActionBar</item>
+        <item name="actionBarStyle">@style/MyOwnColor.ActionBar</item>
+    </style>
+
+    <style name="MyOwnColor.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:height">100dp</item>
+        <item name="height">100dp</item>
+        <item name="android:background">@color/verde_bicco</item>
+        <item name="background">@color/verde_bicco</item>
+    </style>
+
+</resources>

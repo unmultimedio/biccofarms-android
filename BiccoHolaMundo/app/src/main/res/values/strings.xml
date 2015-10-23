@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bicco Hola Mundo</string>
+
+    <string name="hello_world">Hola Bicco!</string>
+    <string name="action_settings">Configuración</string>
+    <string name="action_new">Nuevo</string>
+    <string name="action_edit">Editar</string>
+    <string name="title_activity_second">Segunda Actividad</string>
+    <string name="go_to_second_btn">Ir a la otra actividad</string>
+
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SegundaClase</string>
+    <string name="response_activity_name">Actividad de Respuesta</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_text">Ingresa tu texto</string>
+    <string name="colors_label">Escoge un color</string>
+    <string name="yellow_label">Amarillo</string>
+    <string name="blue_label">Azul</string>
+    <string name="red_label">Rojo</string>
+    <string name="send_btn">Enviar</string>
+    <string name="empty_text_alert">Por favor ingresa un texto</string>
+    <string name="empty_color_alert">Por favor selecciona un color</string>
+    <string name="empty_text">No hay datos</string>
+</resources>
