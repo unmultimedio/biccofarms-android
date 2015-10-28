@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".PlaceholderFragment">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alert_title"
+        android:hint="@string/title_hint"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alert_content"
+        android:hint="@string/content_hint"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alert_btn"
+        android:text="@string/alert_lbl"
+        android:onClick="doAlert"/>
+
+</LinearLayout>

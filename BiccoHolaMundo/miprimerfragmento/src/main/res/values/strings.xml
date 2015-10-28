@@ -8,4 +8,12 @@
     <string name="save_btn">Guardar</string>
     <string name="empty_data">¡Hacen falta datos!</string>
     <string name="no_data">NO DATA</string>
+    <string name="edit_lbl">Editar</string>
+    <string name="duplicate_lbl">Duplicar</string>
+    <string name="delete_lbl">Eliminar</string>
+    <string name="name_lbl">Nombre:</string>
+    <string name="drink_lbl">Bebida:</string>
+    <string name="sport_lbl">Deporte:</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancelar</string>
 </resources>

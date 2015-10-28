@@ -12,12 +12,14 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/basededatos" />
             <option value="$PROJECT_DIR$/biccopreferenciascompartidas" />
+            <option value="$PROJECT_DIR$/dialogos" />
             <option value="$PROJECT_DIR$/geocoder" />
             <option value="$PROJECT_DIR$/listasymenus" />
             <option value="$PROJECT_DIR$/mapastest" />
             <option value="$PROJECT_DIR$/miprimerfragmento" />
             <option value="$PROJECT_DIR$/miprimermapa" />
             <option value="$PROJECT_DIR$/misegundomapa" />
+            <option value="$PROJECT_DIR$/notificaciones" />
             <option value="$PROJECT_DIR$/segundaclase" />
           </set>
         </option>

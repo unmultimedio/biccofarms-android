@@ -25,6 +25,7 @@
         android:layout_weight="1"
         android:name="com.biccofarms.miprimerfragmento.ReceiverFragment"
         />
+    <!--
     <fragment
         android:layout_width="0dp"
         android:layout_height="fill_parent"
@@ -32,5 +33,6 @@
         android:layout_weight="1"
         android:name="com.biccofarms.miprimerfragmento.ReceiverNoDuplicates"
         />
+        -->
 
 </LinearLayout>

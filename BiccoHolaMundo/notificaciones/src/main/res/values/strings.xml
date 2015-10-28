@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Notificaciones</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_title">Ingresa el título</string>
+    <string name="hint_content">Ingresa un contenido</string>
+    <string name="lbl_notify">Notificar</string>
+    <string name="title_activity_results">ResultsActivity</string>
+    <string name="lbl_new_notify">Notificar Nueva</string>
+    <string name="lbl_progress_notify">Notificación de Progreso</string>
+</resources>

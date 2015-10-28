@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".PlaceholderFragment">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_title"
+        android:id="@+id/et_title" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_content"
+        android:id="@+id/et_content" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_notify"
+        android:onClick="notifyButtonClicked"
+        android:id="@+id/notify_btn"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_progress_notify"
+        android:onClick="notifyButtonClicked"
+        android:id="@+id/progress_notify_btn"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_new_notify"
+        android:onClick="notifyButtonClicked"
+        android:id="@+id/new_notify_btn"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

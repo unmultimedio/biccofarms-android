@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity implements Communicator {
@@ -56,8 +57,10 @@ public class MainActivity extends ActionBarActivity implements Communicator {
         ReceiverFragment receiver = (ReceiverFragment)
                 getSupportFragmentManager().findFragmentById(R.id.fragment2);
         receiver.receiveUser(newUser);
+        /*
         ReceiverNoDuplicates receiverND = (ReceiverNoDuplicates)
                 getSupportFragmentManager().findFragmentById(R.id.fragment3);
         receiverND.receiveUser(newUser);
+        // */
     }
 }
