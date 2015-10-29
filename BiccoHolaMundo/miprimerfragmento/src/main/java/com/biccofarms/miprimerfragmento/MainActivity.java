@@ -15,6 +15,10 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity implements Communicator {
 
+    String fragmentContextMenuTag;
+    ReceiverFragment receiver;
+    ReceiverNoDuplicates receiverND;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,13 +58,23 @@ public class MainActivity extends ActionBarActivity implements Communicator {
 
     @Override
     public void userIsReady(User newUser) {
-        ReceiverFragment receiver = (ReceiverFragment)
+        receiver = (ReceiverFragment)
                 getSupportFragmentManager().findFragmentById(R.id.fragment2);
         receiver.receiveUser(newUser);
-        /*
-        ReceiverNoDuplicates receiverND = (ReceiverNoDuplicates)
+        //*
+        receiverND = (ReceiverNoDuplicates)
                 getSupportFragmentManager().findFragmentById(R.id.fragment3);
         receiverND.receiveUser(newUser);
         // */
+    }
+
+    @Override
+    public void setFragmentContextMenu(String tag) {
+        fragmentContextMenuTag = tag;
+    }
+
+    @Override
+    public String getFragmentContextMenu() {
+        return fragmentContextMenuTag;
     }
 }

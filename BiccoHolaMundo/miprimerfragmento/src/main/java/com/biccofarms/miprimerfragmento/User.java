@@ -61,4 +61,8 @@ public class User implements Serializable {
                 this.drink.equals(u.getDrink()) &&
                 this.sport.equals(u.getSport());
     }
+
+    public User makeACopy() {
+        return new User(id, name, drink, sport);
+    }
 }

@@ -1,9 +1,11 @@
 package com.biccofarms.misegundomapa;
 
+import android.location.Location;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -19,6 +21,7 @@ public class MainActivity extends ActionBarActivity implements
         Communicator {
 
     MarkersList markersList;
+    MyMapFragment mapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,8 @@ public class MainActivity extends ActionBarActivity implements
         super.onStart();
         markersList = (MarkersList)
                 getSupportFragmentManager().findFragmentById(R.id.markers_list_fragment);
+        mapFragment = (MyMapFragment)
+                getSupportFragmentManager().findFragmentById(R.id.map);
     }
 
     @Override
@@ -56,6 +61,11 @@ public class MainActivity extends ActionBarActivity implements
     }
 
     @Override
+    public void startLocationUpdates(View view) {
+        markersList.startLocationUpdates();
+    }
+
+    @Override
     public void newMarkerCreated(Marker marker) {
         markersList.newMarkerInList(marker);
     }
@@ -63,5 +73,10 @@ public class MainActivity extends ActionBarActivity implements
     @Override
     public void dragEnd() {
         markersList.update();
+    }
+
+    @Override
+    public void shareMyLocation(Location location) {
+        mapFragment.updateMyLocation(location);
     }
 }

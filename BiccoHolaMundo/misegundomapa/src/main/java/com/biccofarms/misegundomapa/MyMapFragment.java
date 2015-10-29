@@ -1,6 +1,7 @@
 package com.biccofarms.misegundomapa;
 
 import android.app.Activity;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,16 +24,17 @@ public class MyMapFragment extends SupportMapFragment implements
     Activity myParentActivity;
     Communicator myParentInterface;
     GoogleMap myMap;
-    LatLng biccoLocation = new LatLng(4.81442576,-74.32188749);
+    Marker myPosition;
+    LatLng biccoLocation = new LatLng(4.81442576, -74.32188749);
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         myParentActivity = activity;
-        try{
+        try {
             myParentInterface = (Communicator) activity;
-        }catch(ClassCastException e){
-            Log.e("mapas-bicco","La clase papá no implementa el Comunicador");
+        } catch (ClassCastException e) {
+            Log.e("mapas-bicco", "La clase papá no implementa el Comunicador");
         }
     }
 
@@ -53,7 +55,7 @@ public class MyMapFragment extends SupportMapFragment implements
         Marker newMarker = myMap.addMarker(new MarkerOptions()
                 .position(latLng)
                 .draggable(true)
-                .title("Marker "+(markerCount++))
+                .title("Marker " + (markerCount++))
                 .snippet(latLng.toString()));
         myParentInterface.newMarkerCreated(newMarker);
     }
@@ -65,11 +67,22 @@ public class MyMapFragment extends SupportMapFragment implements
 
     @Override
     public void onMarkerDrag(Marker marker) {
-
+        myParentInterface.dragEnd();
     }
 
     @Override
     public void onMarkerDragEnd(Marker marker) {
         myParentInterface.dragEnd();
+    }
+
+    public void updateMyLocation(Location location) {
+        if (myPosition == null) {
+            myPosition = myMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(location.getLatitude(), location.getLongitude()))
+                    .title("YO"));
+        } else{
+            myPosition.setPosition(new LatLng(location.getLatitude(), location.getLongitude()));
+        }
+        if(myPosition.isVisible()) myPosition.showInfoWindow();
     }
 }

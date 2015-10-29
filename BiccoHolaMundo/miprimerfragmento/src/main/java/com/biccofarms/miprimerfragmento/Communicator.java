@@ -8,4 +8,6 @@ import android.view.View;
 public interface Communicator {
     public void insertUser(View view);
     public void userIsReady(User newUser);
+    public void setFragmentContextMenu(String tag);
+    public String getFragmentContextMenu();
 }
