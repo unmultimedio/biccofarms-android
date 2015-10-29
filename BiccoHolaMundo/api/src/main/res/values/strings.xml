@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">API</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="query_hint">Ingresa un lugar</string>
+    <string name="do_query_lbl">Consultar</string>
+    <string name="city_lbl">Ciudad:</string>
+    <string name="weather_lbl">Clima:</string>
+    <string name="temperature_lbl">Temperatura:</string>
+    <string name="pressure_lbl">Presión:</string>
+    <string name="humidity_lbl">Humedad:</string>
+    <string name="no_data">No hay datos</string>
+</resources>
