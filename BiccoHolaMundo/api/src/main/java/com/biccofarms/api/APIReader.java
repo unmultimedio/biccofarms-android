@@ -8,14 +8,13 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.Scanner;
 
 
 /**
  * Created by julian on 10/29/15.
  */
-public class APIReader extends AsyncTask<String, String, String> {
+public class APIReader extends AsyncTask<String, String, Object> {
 
     APIReaderInterface myParentInterface;
 
@@ -29,7 +28,7 @@ public class APIReader extends AsyncTask<String, String, String> {
     }
 
     @Override
-    protected String doInBackground(String... strings) {
+    protected Object doInBackground(String... strings) {
         String urlString = strings[0];
 
         try {
@@ -48,6 +47,10 @@ public class APIReader extends AsyncTask<String, String, String> {
             publishProgress("Estamos conectados a la URL...");
 
             InputStream inputStream = connection.getInputStream();
+            if(myParentInterface.getMode().equals(WeatherParser.XML_MODE)){
+                return inputStream;
+            }
+
             Scanner scanner = new Scanner(inputStream);
             publishProgress("Tenemos el stream, leyendo datos...");
 
@@ -67,10 +70,15 @@ public class APIReader extends AsyncTask<String, String, String> {
     }
 
     @Override
-    protected void onPostExecute(String webResponse) {
+    protected void onPostExecute(Object webResponse) {
         super.onPostExecute(webResponse);
-        if(webResponse != null)
-            myParentInterface.returnWebResponse(webResponse);
+        if(webResponse != null) {
+            try {
+                myParentInterface.returnWebResponse(webResponse);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
@@ -81,7 +89,8 @@ public class APIReader extends AsyncTask<String, String, String> {
     }
 
     public interface APIReaderInterface {
-        void returnWebResponse(String webResponse);
+        void returnWebResponse(Object webResponse) throws Exception;
         void sendToLog(String value);
+        String getMode();
     }
 }

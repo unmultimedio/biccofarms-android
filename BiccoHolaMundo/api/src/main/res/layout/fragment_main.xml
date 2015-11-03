@@ -13,6 +13,30 @@
         android:id="@+id/query"
         android:hint="@string/query_hint"/>
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/mode_selection">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mode"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mode_json"
+            android:layout_weight="1"
+            android:id="@+id/json_mode_radio"
+            android:checked="true"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/xml_mode_radio"
+            android:text="@string/mode_xml"/>
+    </RadioGroup>
+
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

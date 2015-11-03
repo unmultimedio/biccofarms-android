@@ -10,10 +10,10 @@
       <module fileurl="file://$PROJECT_DIR$/dialogos/dialogos.iml" filepath="$PROJECT_DIR$/dialogos/dialogos.iml" />
       <module fileurl="file://$PROJECT_DIR$/geocoder/geocoder.iml" filepath="$PROJECT_DIR$/geocoder/geocoder.iml" />
       <module fileurl="file://$PROJECT_DIR$/listasymenus/listasymenus.iml" filepath="$PROJECT_DIR$/listasymenus/listasymenus.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mapastest/mapastest.iml" filepath="$PROJECT_DIR$/mapastest/mapastest.iml" />
       <module fileurl="file://$PROJECT_DIR$/miprimerfragmento/miprimerfragmento.iml" filepath="$PROJECT_DIR$/miprimerfragmento/miprimerfragmento.iml" />
       <module fileurl="file://$PROJECT_DIR$/miprimermapa/miprimermapa.iml" filepath="$PROJECT_DIR$/miprimermapa/miprimermapa.iml" />
       <module fileurl="file://$PROJECT_DIR$/misegundomapa/misegundomapa.iml" filepath="$PROJECT_DIR$/misegundomapa/misegundomapa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/navigationdrawer/navigationdrawer.iml" filepath="$PROJECT_DIR$/navigationdrawer/navigationdrawer.iml" />
       <module fileurl="file://$PROJECT_DIR$/notificaciones/notificaciones.iml" filepath="$PROJECT_DIR$/notificaciones/notificaciones.iml" />
       <module fileurl="file://$PROJECT_DIR$/segundaclase/segundaclase.iml" filepath="$PROJECT_DIR$/segundaclase/segundaclase.iml" />
     </modules>

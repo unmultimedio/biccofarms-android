@@ -5,47 +5,22 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Objects;
+
 /**
  * Created by julian on 10/29/15.
  */
-public class JSONParser implements APIReader.APIReaderInterface {
-
-    public interface ParserInterface {
-        void shareValue(MyFragment.DataTypes dataType, Object value);
-        void sendToLog(String value);
-    }
-
-    static final String URL_BASE = "http://api.openweathermap.org/data/2.5/weather?";
-    static final String API_KEY = "261db4f329734dfce4709303a4a0574e";
-
-    ParserInterface myParentInterface;
-    String query;
+public class JSONParser extends WeatherParser {
 
     public JSONParser(ParserInterface i) {
-        myParentInterface = i;
-    }
-
-    public String getQuery() {
-        return query;
-    }
-
-    public void setQuery(String query) {
-        this.query = query;
-    }
-
-    private String getUrl(){
-        return URL_BASE + "q=" + query + "&appid=" + API_KEY;
-    }
-
-    public void startQuery(){
-        APIReader reader = new APIReader(this);
-        reader.execute(getUrl());
+        super(i);
+        myMode = JSON_MODE;
     }
 
     @Override
-    public void returnWebResponse(String webResponse) {
+    public void returnWebResponse(Object webResponse) {
         try {
-            JSONObject json = new JSONObject(webResponse);
+            JSONObject json = new JSONObject(webResponse.toString());
 
             String name = json.getString("name");
             sendToLog("Leyendo el nombre de la ciudad...");
@@ -87,10 +62,5 @@ public class JSONParser implements APIReader.APIReaderInterface {
         } catch (JSONException e) {
             Log.e("bicco", "El String retornado no es un Objeto JSON");
         }
-    }
-
-    @Override
-    public void sendToLog(String value) {
-        myParentInterface.sendToLog(value);
     }
 }

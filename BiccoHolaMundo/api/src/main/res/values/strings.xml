@@ -10,4 +10,7 @@
     <string name="pressure_lbl">Presión:</string>
     <string name="humidity_lbl">Humedad:</string>
     <string name="no_data">No hay datos</string>
+    <string name="mode_json">JSON</string>
+    <string name="mode_xml">XML</string>
+    <string name="mode">Modo:</string>
 </resources>

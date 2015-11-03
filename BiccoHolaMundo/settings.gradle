@@ -1,1 +1,1 @@
-include ':app', ':segundaclase', ':listasymenus', ':biccopreferenciascompartidas', ':basededatos', ':mapastest', ':miprimerfragmento', ':miprimermapa', ':misegundomapa', ':geocoder', ':notificaciones', ':dialogos', ':api'
+include ':app', ':segundaclase', ':listasymenus', ':biccopreferenciascompartidas', ':basededatos', ':miprimerfragmento', ':miprimermapa', ':misegundomapa', ':geocoder', ':notificaciones', ':dialogos', ':api', ':navigationdrawer'

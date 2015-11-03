@@ -1,5 +1,6 @@
 package com.biccofarms.api;
 
+import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 /**
@@ -15,16 +17,26 @@ import android.widget.TextView;
 public class MyFragment extends Fragment implements
         JSONParser.ParserInterface {
 
+    private Activity myParentActivity;
+
     static enum DataTypes {
         CITY_NAME, WEATHER, TEMPERATURE, PRESSURE, HUMIDITY
     }
 
     JSONParser jsonParser;
+    XMLParser xmlParser;
     EditText queryET;
     TextView cityTV, weatherTV, temperatureTV, pressureTV, humidityTV, loggerTV;
 
     public MyFragment() {
         jsonParser = new JSONParser(this);
+        xmlParser = new XMLParser(this);
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        myParentActivity = activity;
     }
 
     @Override
@@ -46,8 +58,17 @@ public class MyFragment extends Fragment implements
         if (query.isEmpty()) return;
         query.trim();
         query = Uri.encode(query);
-        jsonParser.setQuery(query);
-        jsonParser.startQuery();
+        RadioGroup rg = (RadioGroup) myParentActivity.findViewById(R.id.mode_selection);
+        switch (rg.getCheckedRadioButtonId()){
+            case R.id.json_mode_radio:
+                jsonParser.setQuery(query);
+                jsonParser.startQuery();
+                break;
+            case R.id.xml_mode_radio:
+                xmlParser.setQuery(query);
+                xmlParser.startQuery();
+                break;
+        }
     }
 
     @Override

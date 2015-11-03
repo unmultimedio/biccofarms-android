@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Navigation Drawer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="options_nav_drawer">
+        <item>Fragmento 1</item>
+        <item>Fragmento 2</item>
+        <item>Fragmento 3</item>
+    </string-array>
+</resources>
