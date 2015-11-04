@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Push</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="email_hint">Ingresa tu email</string>
+    <string name="name_hint">Ingresa tu nombre</string>
+    <string name="no_data">NO HAY INFO</string>
+    <string name="register">Registrar</string>
+    <string name="clear_regId">Limpiar Registro de GCM</string>
+</resources>

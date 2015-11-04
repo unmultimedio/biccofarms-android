@@ -1,5 +1,7 @@
 package com.biccofarms.navigationdrawer;
 
+import android.app.FragmentManager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,28 +12,38 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.Serializable;
+
 
 public class MainActivity extends ActionBarActivity
-        implements AdapterView.OnItemClickListener {
+        implements AdapterView.OnItemClickListener, FlowersInterface, Serializable {
 
+    DrawerLayout drawerLayout;
     ListView navigationDrawer;
     String[] optionsInDrawer;
     MyFragment fragment;
+
+    InputFragment fragmentInput;
+    FlowersFragment fragmentFlowers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         optionsInDrawer = getResources().getStringArray(R.array.options_nav_drawer);
 
+        fragmentInput = new InputFragment();
+        fragmentFlowers = new FlowersFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("context", this);
+        fragmentFlowers.setArguments(bundle);
+        fragmentFlowers.setUpFragment();
+
         if (savedInstanceState == null) {
-            fragment = new MyFragment();
-            Bundle args = new Bundle();
-            args.putString(MyFragment.NAME_FRAGMENT_KEY, optionsInDrawer[0]);
-            fragment.setArguments(args);
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, fragment)
+                    .add(R.id.container, fragmentInput)
                     .commit();
         }
 
@@ -71,6 +83,38 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long idRowView) {
-        Toast.makeText(this, "Click en "+optionsInDrawer[position], Toast.LENGTH_SHORT).show();
+        selectItem(position);
+    }
+
+    private void selectItem(int position) {
+
+        android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
+
+        switch (position){
+            case 0:
+                fm.beginTransaction()
+                        .replace(R.id.container, fragmentInput)
+                        .commit();
+                break;
+            case 1:
+                fm.beginTransaction()
+                        .replace(R.id.container, fragmentFlowers)
+                        .commit();
+                break;
+        }
+
+        setTitle(optionsInDrawer[position]);
+        drawerLayout.closeDrawer(navigationDrawer);
+    }
+
+    @Override
+    public void addFlower(View view) {
+        fragmentInput.addButtonClicked();
+    }
+
+    @Override
+    public void newFlower(String flowerName) {
+        selectItem(1);
+        fragmentFlowers.addFlower(flowerName);
     }
 }

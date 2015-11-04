@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sender_id">852925513117</string>
+    <string name="url_register">http://sikuani.net/gcm_example/register.php</string>
+</resources>

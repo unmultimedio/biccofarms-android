@@ -4,8 +4,10 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="options_nav_drawer">
-        <item>Fragmento 1</item>
-        <item>Fragmento 2</item>
-        <item>Fragmento 3</item>
+        <item>Insertar Flor</item>
+        <item>Ver Flores</item>
     </string-array>
+
+    <string name="hint_insert">Inserte una flor</string>
+    <string name="btn_insert">Insertar</string>
 </resources>
